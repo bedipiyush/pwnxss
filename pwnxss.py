@@ -5,10 +5,7 @@ from lib.helper.Log import *
 from lib.core import *
 from random import randint
 from lib.crawler.crawler import *
-epilog="""
-Github: https://www.github.com/pwn0sec/PwnXSS
-Version: 0.5 Final
-"""
+
 def check(getopt):
 	payload=int(getopt.payload_level)
 	if payload > 6 and getopt.payload is None:
@@ -53,11 +50,7 @@ def start():
 		core.main(getopt.single,getopt.proxy,getopt.user_agent,check(getopt),getopt.cookie,getopt.method)
 		
 	elif getopt.about:
-		print("""
-***************
 
-License: MIT
-"""+epilog)
 	else:
 		parse.print_help()
 		
